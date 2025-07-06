@@ -1,2 +1,25 @@
 name="Person"
 description="This is my portfolio"
+[[contacts]]
+name = "GitHub"
+link = "https://github.com/"
+logo = "SiGithub"
+color = "#000000"
+
+# [[contacts]]
+# name = "LinkedIn"
+# link = "https://linkedin.com/"
+# logo = "SiLinkedin"
+# color = "#0077b5"
+
+[[contacts]]
+name = "Twitter"
+link = "https://twitter.com/"
+logo = "SiX"
+color = "#1da1f2"
+
+[[contacts]]
+name = "Email"
+link = "mailto:example@example.com"
+logo = "SiGmail"
+color = "#000000"
