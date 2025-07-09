@@ -1,0 +1,34 @@
+[[sections]]
+name = "Programming Languages"
+
+[[sections.skills]]
+name = "Python"
+icon = "devicon:python"
+# color = "#0000FF"
+
+[[sections.skills]]
+name = "Rust"
+icon = "devicon:rust"
+color = "#FF0000"
+
+[[sections.skills]]
+name = "Java"
+icon = "devicon:java"
+
+[[sections]]
+name = "Frameworks"
+
+[[sections.skills]]
+name = "Svelte"
+icon = "devicon:svelte"
+
+[[sections.skills]]
+name = "React"
+icon = "devicon:react"
+
+[[sections]]
+name = "Tools"
+
+[[sections.skills]]
+name = "Fusion"
+icon = "devicon:fusion"

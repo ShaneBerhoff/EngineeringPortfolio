@@ -1,25 +1,25 @@
 name="Person"
 description="This is my portfolio"
+
 [[contacts]]
 name = "GitHub"
 link = "https://github.com/"
-logo = "github"
-color = "#000000"
+icon = "devicon:github"
+# color = "#000000"
 
 [[contacts]]
 name = "LinkedIn"
 link = "https://linkedin.com/"
-icon = "linkedin"
-color = "#0077b5"
+icon = "devicon:linkedin"
 
 [[contacts]]
 name = "Twitter"
 link = "https://twitter.com/"
-logo = "x"
-color = "#1da1f2"
+icon = "devicon:twitter"
+# color = "#1da1f2"
 
 [[contacts]]
 name = "Email"
 link = "mailto:example@example.com"
-icon = "mail"
-color = "#000000"
+icon = "material-symbols:alternate-email"
+# color = "#000000"

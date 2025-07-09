@@ -12,13 +12,14 @@ export function tomlWatcher(): Plugin {
 
 		buildStart() {
 			this.addWatchFile('content/home.toml');
+			this.addWatchFile('content/skills.toml');
 		},
 
 		configureServer(viteServer) {
 			server = viteServer;
 
 			// Add generated files to Vite's watcher
-			const generatedFiles = ['src/lib/generated/icons.ts', 'src/lib/generated/logos.ts'];
+			const generatedFiles = ['src/lib/generated/icons.ts'];
 
 			generatedFiles.forEach((file) => {
 				viteServer.watcher.add(file);
@@ -51,7 +52,7 @@ export function tomlWatcher(): Plugin {
 		},
 
 		async handleHotUpdate({ file }) {
-			if (file.endsWith('home.toml') && !isGenerating) {
+			if (file.endsWith('home.toml') || file.endsWith('skills.toml') && !isGenerating) {
 				isGenerating = true;
 				console.log('🔄 TOML changed, regenerating icons...');
 

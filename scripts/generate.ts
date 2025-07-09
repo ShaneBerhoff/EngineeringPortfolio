@@ -1,35 +1,34 @@
 import { readFileSync } from 'fs';
-import { generateLogosModule } from './generate-logos';
 import { generateIconsModule } from './generate-icons';
-import { HomeConfigSchema } from '../src/lib/types';
+import { HomeConfigSchema, SkillsConfigSchema } from '../src/lib/types';
 import TOML from '@iarna/toml';
 
 function generateModule() {
 	try {
-		const tomlContent = readFileSync('content/home.toml', 'utf8');
-		const parsed = TOML.parse(tomlContent);
-		const config = HomeConfigSchema.parse(parsed);
+		const homeData = HomeConfigSchema.parse(TOML.parse(readFileSync('content/home.toml', 'utf8')));
+		const skillData = SkillsConfigSchema.parse(
+			TOML.parse(readFileSync('content/skills.toml', 'utf8'))
+		);
 
-		const logoNames = [
-			...new Set(
-				config.contacts.map((contact) => contact.logo).filter((logo) => typeof logo === 'string')
-			)
-		];
+		const allIcons = new Set<string>();
 
-		const iconNames = [
-			...new Set(
-				config.contacts.map((contact) => contact.icon).filter((icon) => typeof icon == 'string')
-			)
-		];
+		homeData.contacts.forEach((contact) => {
+			if (contact.icon) {
+				allIcons.add(contact.icon);
+			}
+		});
 
-		if (logoNames.length !== 0) {
-			generateLogosModule(logoNames);
+		skillData.sections.forEach((section) => {
+			section.skills.forEach((skill) => {
+				if (skill.icon) {
+					allIcons.add(skill.icon);
+				}
+			});
+		});
+
+		if (allIcons.size !== 0) {
+			generateIconsModule([...allIcons]);
 		}
-
-        if (iconNames.length !== 0){
-            generateIconsModule(iconNames);
-        }
-
 	} catch (error) {
 		console.error('Failed to parse toml files:', error);
 		process.exit(1);
