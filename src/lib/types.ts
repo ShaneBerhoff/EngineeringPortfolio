@@ -1,5 +1,23 @@
 import { z } from 'zod';
 
+const NavItemSchema = z.object({
+	enabled: z.boolean(),
+	name: z.string(),
+	icon: z.string().optional()
+});
+
+export const SiteConfigSchema = z.object({
+	name: z.string(),
+	icon: z.string().optional(),
+	navigation: z.object({
+		projects: NavItemSchema,
+		work: NavItemSchema,
+		skills: NavItemSchema,
+		resume: NavItemSchema
+	})
+});
+export type SiteConfig = z.infer<typeof SiteConfigSchema>;
+
 // Hex color validation regex
 const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
 

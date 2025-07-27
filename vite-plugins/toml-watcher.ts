@@ -11,6 +11,7 @@ export function tomlWatcher(): Plugin {
 		name: 'toml-watcher',
 
 		buildStart() {
+			this.addWatchFile('content/site.toml');
 			this.addWatchFile('content/home.toml');
 			this.addWatchFile('content/skills.toml');
 		},
@@ -52,7 +53,7 @@ export function tomlWatcher(): Plugin {
 		},
 
 		async handleHotUpdate({ file }) {
-			if (file.endsWith('home.toml') || file.endsWith('skills.toml') && !isGenerating) {
+			if (file.endsWith('site.toml') || file.endsWith('home.toml') || file.endsWith('skills.toml') && !isGenerating) {
 				isGenerating = true;
 				console.log('🔄 TOML changed, regenerating icons...');
 

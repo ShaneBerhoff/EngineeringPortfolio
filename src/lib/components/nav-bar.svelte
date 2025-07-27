@@ -1,13 +1,33 @@
 <script lang="ts">
+	import { getIcon } from '$lib/generated/icons';
+	import type { SiteConfig } from '$lib/types';
+	let { data }: { data: SiteConfig } = $props();
 </script>
 
-<div class="flex flex-row m-4">
-    <a href="/">Home</a>
-	<nav class="justify-evenly flex flex-grow">
-		<a href="/projects">Projects</a>
-		<a href="/work">Work</a>
-		<a href="/skills">Skills</a>
-		<a href="/resume">Resume</a>
+<div
+	class="flex flex-row border-b-1 border-gray-300 p-2
+	[&_a]:flex [&_a]:flex-row [&_a]:items-center [&_a]:gap-2 [&_a]:rounded
+	[&_a]:p-2 [&_a]:transition-all [&_a]:hover:bg-gray-200"
+>
+	<a href="/">
+		{#if data.icon}
+			{@const IconComponent = getIcon(data.icon)}
+			<IconComponent />
+		{/if}
+		{data.name}
+	</a>
+	<nav class="flex flex-grow justify-evenly">
+		{#each Object.entries(data.navigation) as [key, navItem]}
+			{#if navItem.enabled}
+				<a href={`/${key}`}>
+					{#if navItem.icon}
+						{@const IconComponent = getIcon(navItem.icon)}
+						<IconComponent />
+					{/if}
+					{navItem.name}
+				</a>
+			{/if}
+		{/each}
 	</nav>
-    <button>Toggle</button>
+	<button>Toggle</button>
 </div>

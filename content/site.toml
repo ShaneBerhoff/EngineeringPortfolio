@@ -1,1 +1,22 @@
-title="test"
+name="John Doe"
+icon="devicon:bash"
+
+[navigation.projects]
+enabled=true
+name="Projects"
+icon="material-symbols:folder-code-outline"
+
+[navigation.work]
+enabled=true
+name="Work"
+icon="material-symbols:work-outline"
+
+[navigation.skills]
+enabled=true
+name="Skills"
+icon="game-icons:skills"
+
+[navigation.resume]
+enabled=true
+name="Resume"
+icon="qlementine-icons:resume-16"

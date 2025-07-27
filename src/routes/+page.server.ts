@@ -7,9 +7,5 @@ export function load() {
 	const parsed = TOML.parse(tomlContent);
 	const config = HomeConfigSchema.parse(parsed);
 
-	return {
-		name: config.name,
-		description: config.description,
-		contacts: config.contacts
-	};
+	return config;
 }
