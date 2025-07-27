@@ -5,7 +5,7 @@
 	let { children, data }: { children: import('svelte').Snippet; data: SiteConfig } = $props();
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col w-screen h-screen">
 	<NavBar {data} />
-	<div>{@render children()}</div>
+	{@render children()}
 </div>
