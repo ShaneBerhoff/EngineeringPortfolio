@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="flex flex-row border-b-1 border-gray-300 p-2
+	class="absolute left-0 right-0 top-0 z-10 flex flex-row border-b-1 p-2 border-gray-300 bg-white h-15
 	[&_a]:flex [&_a]:flex-row [&_a]:items-center [&_a]:gap-2 [&_a]:rounded
 	[&_a]:p-2 [&_a]:transition-all [&_a]:hover:bg-gray-200"
 >
