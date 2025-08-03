@@ -4,7 +4,7 @@ name = "Programming Languages"
 [[sections.skills]]
 name = "Python"
 icon = "devicon:python"
-# color = "#0000FF"
+color = "#0000FF"
 
 [[sections.skills]]
 name = "Rust"
@@ -14,6 +14,11 @@ color = "#FF0000"
 [[sections.skills]]
 name = "Java"
 icon = "devicon:java"
+
+[[sections.skills]]
+name = "C++"
+icon = "devicon:cplusplus"
+color = "#0000FF"
 
 [[sections]]
 name = "Frameworks"

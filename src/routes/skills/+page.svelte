@@ -1,19 +1,23 @@
 <script lang="ts">
-	import { getIcon } from '$lib/generated/icons';
+	import SkillCard from '$lib/components/skill-card.svelte';
 	import type { SkillsConfig } from '$lib/types';
 	let { data }: { data: SkillsConfig } = $props();
 </script>
 
-<div class="flex flex-col">
-	{#each data.sections as section}
-		<div class="text-center text-3xl p-10">{section.name}</div>
-		<div class="flex flex-row justify-evenly">
-			{#each section.skills as skill}
-				{#if skill.icon}
-					{@const IconComponent = getIcon(skill.icon)}
-					<div class="flex flex-col items-center">{skill.name}<IconComponent color={skill.color} font-size={24} /></div>
-				{/if}
-			{/each}
-		</div>
-	{/each}
+<div class="flex h-full w-full justify-center">
+	<div class="flex h-full max-w-5xl flex-grow flex-col">
+		<div class="p-4 text-center text-6xl font-bold">Skills</div>
+		{#each data.sections as section}
+			<div class="flex flex-row items-center gap-2 py-4">
+				<hr class="w-24 border-gray-300" />
+				<div class="text-sm text-gray-500">{section.name}</div>
+				<hr class="flex-1 border-gray-300" />
+			</div>
+			<div class="flex flex-row flex-wrap gap-4 mb-10">
+				{#each section.skills as skill}
+					<SkillCard color={skill.color} icon={skill.icon} text={skill.name} />
+				{/each}
+			</div>
+		{/each}
+	</div>
 </div>
