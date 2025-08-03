@@ -6,7 +6,7 @@
     let { data }: { data: ProjectsConfig } = $props();
 </script>
 
-<div class="flex flex-grow flex-col items-center pb-5">
+<div class="flex flex-grow flex-col items-center px-4 pb-4">
     {#each data.projects as project}
         {#if project.type == "large"}
             <ProjectCardLarge {project}/>
