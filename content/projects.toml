@@ -1,0 +1,21 @@
+[[projects]]
+type = "large"
+style = "grid"
+title = "This is a project title"
+top_left = { type = "text", content = "This is some text" }
+bottom_left = { type = "model", content = "BoxAnimated.glb" }
+top_middle = { type = "image", content = "profile.png" }
+bottom_middle = { type = "text", content = "This is some text" }
+top_right = { type = "text", content = "This is some text" }
+bottom_right = { type = "image", content = "profile.png" }
+
+[[projects]]
+type = "large"
+style = "grid"
+title = "This is a project title"
+top_left = { type = "text", content = "This is some text" }
+bottom_left = { type = "model", content = "BoxAnimated.glb" }
+top_middle = { type = "image", content = "profile.png" }
+bottom_middle = { type = "text", content = "This is some text" }
+top_right = { type = "text", content = "This is some text" }
+bottom_right = { type = "image", content = "profile.png" }

@@ -57,6 +57,26 @@ export const SkillsConfigSchema = z.object({
 });
 export type SkillsConfig = z.infer<typeof SkillsConfigSchema>;
 
-// export interface SiteConfig {
-// 	title: string;
-// }
+const ProjectTypeSchema = z.enum(['large', 'small']);
+const ProjectStyleSchema = z.enum(['grid', 'horizontal', 'vertical']);
+const ContentTypeSchema = z.enum(['text', 'image', 'model']);
+const ProjectContentSchema = z.object({
+	type: ContentTypeSchema,
+	content: z.string()
+});
+const ProjectSchema = z.object({
+	type: ProjectTypeSchema,
+	style: ProjectStyleSchema,
+	title: z.string(),
+	top_left: ProjectContentSchema.optional(),
+	bottom_left: ProjectContentSchema.optional(),
+	top_middle: ProjectContentSchema.optional(),
+	bottom_middle: ProjectContentSchema.optional(),
+	top_right: ProjectContentSchema.optional(),
+	bottom_right: ProjectContentSchema.optional()
+});
+export const ProjectsConfigSchema = z.object({
+	projects: z.array(ProjectSchema)
+})
+export type ProjectConfig = z.infer<typeof ProjectSchema>;
+export type ProjectsConfig = z.infer<typeof ProjectsConfigSchema>;

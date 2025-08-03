@@ -1,5 +1,7 @@
 <script lang="ts">
+	import type { ProjectConfig } from '$lib/types';
 	import ModelViewer from './model-viewer.svelte';
+	let { project }: { project: ProjectConfig } = $props();
 </script>
 
 <div
