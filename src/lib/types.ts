@@ -68,18 +68,12 @@ const ProjectGridContentSchema = z.object({
 const ProjectSchema = z.object({
 	type: ProjectTypeSchema,
 	title: z.string(),
-	small_section: z.object({
-		type: ContentTypeSchema,
-		content: z.string()
-	}),
-	large_section: z.object({
-		type: ContentTypeSchema,
-		content: z.string()
-	}),
+	side_item: z.array(ProjectGridContentSchema),
 	grid_item: z.array(ProjectGridContentSchema)
 });
 export const ProjectsConfigSchema = z.object({
 	projects: z.array(ProjectSchema)
 });
+export type ContentType = z.infer<typeof ContentTypeSchema>;
 export type ProjectConfig = z.infer<typeof ProjectSchema>;
 export type ProjectsConfig = z.infer<typeof ProjectsConfigSchema>;

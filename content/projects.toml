@@ -1,27 +1,31 @@
 [[projects]]
 type = "large"
 title = "This is a project title"
-[projects.small_section]
+[[projects.side_item]]
+rows = 1
+cols = 1
 type="text"
-content="This is some text"
-[projects.large_section]
+content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+[[projects.side_item]]
+rows = 3
+cols = 1
 type="model"
 content = "BoxAnimated.glb"
 [[projects.grid_item]]
 rows = 2
-cols = 2
+cols = 1
 type = "text"
-content = "This is some text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
 [[projects.grid_item]]
 rows = 2
-cols = 2
+cols = 3
 type = "model"
 content = "BoxAnimated.glb"
 [[projects.grid_item]]
 rows = 2
 cols = 2
 type = "text"
-content = "This is some text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
 [[projects.grid_item]]
 rows = 1
 cols = 2
@@ -34,36 +38,70 @@ type = "image"
 content = "profile.png"
 
 [[projects]]
-type = "large"
+type = "small"
 title = "This is a project title"
-[projects.small_section]
-type="text"
-content="This is some text"
-[projects.large_section]
+[[projects.side_item]]
+rows = 2
+cols = 1
 type="model"
 content = "BoxAnimated.glb"
+
 [[projects.grid_item]]
-rows = 2
-cols = 2
+rows = 1
+cols = 4
 type = "text"
-content = "This is some text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+[[projects.grid_item]]
+rows = 1
+cols = 1
+type = "image"
+content = "profile.png"
+[[projects.grid_item]]
+rows = 1
+cols = 3
+type = "model"
+content = "BoxAnimated.glb"
+
+[[projects]]
+type = "large"
+title = "This is a project title"
+[[projects.side_item]]
+rows = 1
+cols = 1
+type="model"
+content = "BoxAnimated.glb"
+[[projects.side_item]]
+rows = 3
+cols = 1
+type="image"
+content="profile.png"
+[[projects.grid_item]]
+rows = 1
+cols = 4
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+[[projects.grid_item]]
+rows = 1
+cols = 1
+type = "image"
+content = "profile.png"
 [[projects.grid_item]]
 rows = 2
-cols = 2
+cols = 3
 type = "model"
 content = "BoxAnimated.glb"
 [[projects.grid_item]]
 rows = 2
-cols = 2
-type = "text"
-content = "This is some text"
-[[projects.grid_item]]
-rows = 1
-cols = 2
+cols = 1
 type = "image"
 content = "profile.png"
 [[projects.grid_item]]
 rows = 1
 cols = 2
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+[[projects.grid_item]]
+rows = 1
+cols = 1
 type = "image"
 content = "profile.png"
