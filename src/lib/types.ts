@@ -11,7 +11,7 @@ export const SiteConfigSchema = z.object({
 	icon: z.string().optional(),
 	navigation: z.object({
 		projects: NavItemSchema,
-		work: NavItemSchema,
+		experience: NavItemSchema,
 		skills: NavItemSchema,
 		resume: NavItemSchema
 	})
@@ -77,3 +77,14 @@ export const ProjectsConfigSchema = z.object({
 export type ContentType = z.infer<typeof ContentTypeSchema>;
 export type ProjectConfig = z.infer<typeof ProjectSchema>;
 export type ProjectsConfig = z.infer<typeof ProjectsConfigSchema>;
+
+export const ResumeConfigSchema = z.object({
+	title: z.string(),
+	url: z.string()
+});
+export type ResumeConfig = z.infer<typeof ResumeConfigSchema>;
+
+export const ExperienceConfigSchema = z.object({
+	experience: z.array(ProjectSchema)
+});
+export type ExperienceConfig = z.infer<typeof ExperienceConfigSchema>;

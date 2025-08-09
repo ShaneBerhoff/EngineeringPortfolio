@@ -6,9 +6,9 @@ enabled=true
 name="Projects"
 icon="material-symbols:folder-code-outline"
 
-[navigation.work]
+[navigation.experience]
 enabled=true
-name="Work"
+name="Experience"
 icon="material-symbols:work-outline"
 
 [navigation.skills]
