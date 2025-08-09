@@ -84,7 +84,13 @@ export const ResumeConfigSchema = z.object({
 });
 export type ResumeConfig = z.infer<typeof ResumeConfigSchema>;
 
+const ExperienceSectionSchema = z.object({
+	company: z.string(),
+	position: z.string(),
+	timeline: z.string(),
+	projects: z.array(ProjectSchema)
+})
 export const ExperienceConfigSchema = z.object({
-	experience: z.array(ProjectSchema)
+	experience: z.array(ExperienceSectionSchema)
 });
 export type ExperienceConfig = z.infer<typeof ExperienceConfigSchema>;

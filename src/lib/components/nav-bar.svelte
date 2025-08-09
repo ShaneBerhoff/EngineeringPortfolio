@@ -4,7 +4,7 @@
 	import type { SiteConfig } from '$lib/types';
 	let { data }: { data: SiteConfig } = $props();
 </script>
-
+<!-- TODO - make nav bar items individually centered -->
 <div
 	class="absolute top-0 right-0 left-0 z-10 flex h-15 flex-row border-b-1 border-gray-300 bg-white p-2
 	[&_a]:flex [&_a]:flex-row [&_a]:items-center [&_a]:gap-2 [&_a]:rounded
