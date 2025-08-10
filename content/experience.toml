@@ -5,45 +5,57 @@ timeline = "Aug. 2024 - Sep. 2025"
 
 [[experience.projects]]
 type = "large"
-title = "This is a project title"
-
-[[experience.projects.side_item]]
-rows = 1
-cols = 2
-type="text"
-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-[[experience.projects.side_item]]
-rows = 3
-cols = 2
-type="model"
-content = "BoxAnimated.glb"
-
+total_rows = 6
+total_cols = 6
+# bg_color="#FFF"
+# border_color="#FF0000"
+# shadow_color="#FF0000"
 [[experience.projects.grid_item]]
 rows = 2
-cols = 1
+cols = 2
 type = "text"
 content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
 [[experience.projects.grid_item]]
+rows = 1
+cols = 2
+type = "title"
+content="Project Title"
+[[experience.projects.grid_item]]
 rows = 2
+cols = 2
+type = "image"
+content = "profile.png"
+[[experience.projects.grid_item]]
+rows = 1
+cols = 1
+type = "image"
+content = "profile.png"
+[[experience.projects.grid_item]]
+rows = 1
+cols = 1
+type = "text"
+content = "Lorem ipsum"
+[[experience.projects.grid_item]]
+rows = 4
 cols = 3
 type = "model"
 content = "BoxAnimated.glb"
+bg_color= "#000"
 [[experience.projects.grid_item]]
 rows = 2
 cols = 2
 type = "text"
 content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
 [[experience.projects.grid_item]]
-rows = 1
-cols = 2
+rows = 2
+cols = 1
 type = "image"
 content = "profile.png"
 [[experience.projects.grid_item]]
-rows = 1
-cols = 2
-type = "image"
-content = "profile.png"
-
+rows = 2
+cols = 3
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
 
 [[experience]]
 company = "Company Name"
@@ -52,44 +64,8 @@ timeline = "Aug. 2024 - Sep. 2025"
 
 [[experience.projects]]
 type = "small"
-title = "This is a project title"
-[[experience.projects.side_item]]
-rows = 2
-cols = 2
-type="model"
-content = "BoxAnimated.glb"
-
-[[experience.projects.grid_item]]
-rows = 1
-cols = 4
-type = "text"
-content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
-[[experience.projects.grid_item]]
-rows = 1
-cols = 1
-type = "image"
-content = "profile.png"
-[[experience.projects.grid_item]]
-rows = 1
-cols = 3
-type = "model"
-content = "BoxAnimated.glb"
-
-
-[[experience.projects]]
-type = "large"
-title = "This is a project title"
-
-[[experience.projects.side_item]]
-rows = 1
-cols = 2
-type="text"
-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-[[experience.projects.side_item]]
-rows = 3
-cols = 2
-type="model"
-content = "BoxAnimated.glb"
+total_rows = 2
+total_cols = 2
 
 [[experience.projects.grid_item]]
 rows = 2
@@ -98,21 +74,58 @@ type = "text"
 content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
 [[experience.projects.grid_item]]
 rows = 2
+cols = 1
+type = "model"
+content="BoxAnimated.glb"
+
+[[experience.projects]]
+type = "large"
+total_rows = 6
+total_cols = 6
+
+[[experience.projects.grid_item]]
+rows = 2
+cols = 2
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
+[[experience.projects.grid_item]]
+rows = 1
+cols = 2
+type = "title"
+content="Project Title"
+[[experience.projects.grid_item]]
+rows = 2
+cols = 2
+type = "image"
+content = "profile.png"
+[[experience.projects.grid_item]]
+rows = 1
+cols = 1
+type = "image"
+content = "profile.png"
+[[experience.projects.grid_item]]
+rows = 1
+cols = 1
+type = "text"
+content = "Lorem ipsum"
+[[experience.projects.grid_item]]
+rows = 4
 cols = 3
 type = "model"
 content = "BoxAnimated.glb"
+bg_color= "#000"
 [[experience.projects.grid_item]]
 rows = 2
 cols = 2
 type = "text"
 content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
 [[experience.projects.grid_item]]
-rows = 1
-cols = 2
+rows = 2
+cols = 1
 type = "image"
 content = "profile.png"
 [[experience.projects.grid_item]]
-rows = 1
-cols = 2
-type = "image"
-content = "profile.png"
+rows = 2
+cols = 3
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."

@@ -57,18 +57,38 @@ export const SkillsConfigSchema = z.object({
 export type SkillsConfig = z.infer<typeof SkillsConfigSchema>;
 
 const ProjectTypeSchema = z.enum(['large', 'small']);
-const ContentTypeSchema = z.enum(['text', 'image', 'model']);
-const ProjectGridContentSchema = z.object({
-	rows: z.number().min(1).max(4),
-	cols: z.number().min(1).max(4),
+const ContentTypeSchema = z.enum(['title', 'text', 'image', 'model']);
+const ProjectCellContentSchema = z.object({
+	rows: z.number().min(1).max(10),
+	cols: z.number().min(1).max(10),
 	type: ContentTypeSchema,
-	content: z.string()
+	content: z.string(),
+	text_color: z
+		.string()
+		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.optional(),
+	bg_color: z
+		.string()
+		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.optional()
 });
 const ProjectSchema = z.object({
 	type: ProjectTypeSchema,
-	title: z.string(),
-	side_item: z.array(ProjectGridContentSchema),
-	grid_item: z.array(ProjectGridContentSchema)
+	total_rows: z.number(),
+	total_cols: z.number(),
+	bg_color: z
+		.string()
+		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.optional(),
+	border_color: z
+		.string()
+		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.optional(),
+	shadow_color: z
+		.string()
+		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.optional(),
+	grid_item: z.array(ProjectCellContentSchema)
 });
 export const ProjectsConfigSchema = z.object({
 	projects: z.array(ProjectSchema)
@@ -88,7 +108,7 @@ const ExperienceSectionSchema = z.object({
 	position: z.string(),
 	timeline: z.string(),
 	projects: z.array(ProjectSchema)
-})
+});
 export const ExperienceConfigSchema = z.object({
 	experience: z.array(ExperienceSectionSchema)
 });
