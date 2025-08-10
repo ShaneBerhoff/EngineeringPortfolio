@@ -35,8 +35,9 @@ content = "Lorem ipsum"
 rows = 4
 cols = 3
 type = "model"
-content = "BoxAnimated.glb"
+content = "bucket_punch.glb"
 bg_color= "#000"
+text_color= "#fff"
 [[projects.grid_item]]
 rows = 2
 cols = 2
@@ -52,3 +53,17 @@ rows = 2
 cols = 3
 type = "text"
 content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor."
+
+[[projects]]
+type = "large"
+total_rows = 1
+total_cols = 1
+# bg_color="#FFF"
+# border_color="#FF0000"
+# shadow_color="#FF0000"
+
+[[projects.grid_item]]
+rows = 1
+cols = 1
+type = "model"
+content = "bucket_punch.glb"

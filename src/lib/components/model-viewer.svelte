@@ -29,6 +29,7 @@
 	let isExploded = $state(false);
 	let isAnimating = $state(false);
 	let isCameraAnimating = $state(false);
+	let inheritedColor = $state('#ffffff'); // Default fallback color
 
 	// Camera and scale variables
 	let cameraPosition = $state<[number, number, number]>([-5, 6, 10]);
@@ -60,9 +61,22 @@
 
 	const clock = new Clock();
 	let animationFrameId: number;
+	let containerRef: HTMLDivElement;
+
+	// Function to read inherited color from parent elements
+	function updateInheritedColor() {
+		if (containerRef) {
+			const computedStyle = getComputedStyle(containerRef);
+			inheritedColor = computedStyle.color;
+			console.log('Inherited color:', inheritedColor);
+		}
+	}
 
 	// Main animation loop with smoothing and camera animation
 	onMount(() => {
+		// Read the inherited color when component mounts
+		updateInheritedColor();
+
 		const animate = () => {
 			// Handle model explosion animation
 			if (isAnimating && mixer && gltf?.animations?.[0]) {
@@ -322,7 +336,7 @@
 	}
 </script>
 
-<div style="position: relative; width: 100%; height: 100%;">
+<div bind:this={containerRef} style="position: relative; width: 100%; height: 100%;">
 	<Canvas renderMode="always">
 		<!-- Camera with mouse controls -->
 		<T.PerspectiveCamera makeDefault position={cameraPosition} fov={25}>
@@ -353,8 +367,8 @@
 		<!-- Grid background -->
 		<Grid
 			position={gridPosition}
-			cellColor="#ffffff"
-			sectionColor="#ffffff"
+			cellColor={inheritedColor}
+			sectionColor={inheritedColor}
 			sectionThickness={0}
 			fadeDistance={25}
 			cellSize={gridCellSize}
@@ -367,16 +381,19 @@
 			<!-- Explode/Collapse Button -->
 			<button
 				class="
-        relative h-12 w-12 cursor-pointer rounded-lg
-        bg-white/10 shadow-lg
-        backdrop-blur-md transition-all duration-200 ease-out
-        before:pointer-events-none before:absolute
-        before:inset-0 before:rounded-lg before:border
-        before:border-gray-300/60 before:[mix-blend-mode:difference] hover:-translate-y-0.5 hover:shadow-xl
-        hover:before:bg-gray-200/30 hover:before:[mix-blend-mode:difference] disabled:cursor-not-allowed
-        disabled:opacity-50 disabled:hover:translate-y-0
-        {isAnimating ? 'cursor-not-allowed opacity-50' : ''}
-        "
+		relative h-12 w-12 cursor-pointer rounded-lg
+		bg-white/10 shadow-lg
+		backdrop-blur-md transition-all duration-200 ease-out
+		before:pointer-events-none before:absolute
+		before:inset-0 before:rounded-lg before:border
+		hover:-translate-y-0.5 hover:shadow-xl
+		disabled:cursor-not-allowed
+		disabled:opacity-50 disabled:hover:translate-y-0
+		{isAnimating ? 'cursor-not-allowed opacity-50' : ''}
+		"
+				style="
+		--inherited-color: {inheritedColor};
+		"
 				onclick={toggleExplode}
 				disabled={isAnimating}
 			>
@@ -385,21 +402,33 @@
 			<!-- Refit Camera Button -->
 			<button
 				class="
-        relative h-12 w-12 cursor-pointer rounded-lg
-        bg-white/10 shadow-lg
-        backdrop-blur-md transition-all duration-200 ease-out
-        before:pointer-events-none before:absolute
-        before:inset-0 before:rounded-lg before:border
-        before:border-gray-300/60 before:[mix-blend-mode:difference] hover:-translate-y-0.5 hover:shadow-xl
-        hover:before:bg-gray-200/30 hover:before:[mix-blend-mode:difference] disabled:cursor-not-allowed
-        disabled:opacity-50 disabled:hover:translate-y-0
-        {isCameraAnimating ? 'cursor-not-allowed opacity-50' : ''}
-        "
+		relative h-12 w-12 cursor-pointer rounded-lg
+		bg-white/10 shadow-lg
+		backdrop-blur-md transition-all duration-200 ease-out
+		before:pointer-events-none before:absolute
+		before:inset-0 before:rounded-lg before:border
+		hover:-translate-y-0.5 hover:shadow-xl
+		disabled:cursor-not-allowed
+		disabled:opacity-50 disabled:hover:translate-y-0
+		{isCameraAnimating ? 'cursor-not-allowed opacity-50' : ''}
+		"
+				style="
+		--inherited-color: {inheritedColor};
+		"
 				onclick={refitCamera}
 				disabled={isCameraAnimating}
 			>
 				📷
 			</button>
 		</div>
+
+		<style>
+			button::before {
+				border-color: color-mix(in srgb, var(--inherited-color) 40%, transparent) !important;
+			}
+			button:hover::before {
+				background-color: color-mix(in srgb, var(--inherited-color) 30%, transparent) !important;
+			}
+		</style>
 	{/if}
 </div>

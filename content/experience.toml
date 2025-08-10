@@ -35,11 +35,13 @@ rows = 1
 cols = 1
 type = "text"
 content = "Lorem ipsum"
+text_color="#fff"
 [[experience.projects.grid_item]]
 rows = 4
 cols = 3
 type = "model"
-content = "BoxAnimated.glb"
+content = "bucket_punch.glb"
+text_color="#fff"
 bg_color= "#000"
 [[experience.projects.grid_item]]
 rows = 2
@@ -76,7 +78,7 @@ content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque fauci
 rows = 2
 cols = 1
 type = "model"
-content="BoxAnimated.glb"
+content="bucket_punch.glb"
 
 [[experience.projects]]
 type = "large"
@@ -84,15 +86,15 @@ total_rows = 6
 total_cols = 6
 
 [[experience.projects.grid_item]]
-rows = 2
-cols = 2
-type = "text"
-content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
-[[experience.projects.grid_item]]
 rows = 1
 cols = 2
 type = "title"
 content="Project Title"
+[[experience.projects.grid_item]]
+rows = 2
+cols = 2
+type = "text"
+content = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas."
 [[experience.projects.grid_item]]
 rows = 2
 cols = 2
@@ -112,8 +114,8 @@ content = "Lorem ipsum"
 rows = 4
 cols = 3
 type = "model"
-content = "BoxAnimated.glb"
-bg_color= "#000"
+content = "bucket_punch.glb"
+bg_color= "#fff"
 [[experience.projects.grid_item]]
 rows = 2
 cols = 2
