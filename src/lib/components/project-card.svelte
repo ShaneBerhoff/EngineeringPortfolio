@@ -30,16 +30,16 @@
 	}
 
 	const boxShadow = `0 4px 6px -1px ${hexToRgba(project.shadow_color || '#e5e7eb', 0.1)}, 0 2px 4px -2px ${hexToRgba(project.shadow_color || '#e5e7eb', 0.1)}`;
-	const hoverShadow = `0 0 25px 8px ${hexToRgba(project.shadow_color || '#e5e7eb', 0.2)}`;
+	const hoverShadow = `0 0 25px 8px ${hexToRgba(project.shadow_color || '#888', 0.2)}`;
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	class="m-4 flex h-[{card_height}rem] w-full max-w-7xl flex-row justify-center space-x-2 overflow-hidden rounded-2xl border-2 p-4 transition-all"
 	onmouseenter={(e) => (e.currentTarget.style.boxShadow = hoverShadow)}
-	onmouseleave={(e) => (e.currentTarget.style.boxShadow = boxShadow)}
+	onmouseleave={(e) => (e.currentTarget.style.boxShadow = 'none')}
 	style="height: {card_height}rem; background-color: {project.bg_color ||
-		'#FFF'}; border-color: {project.border_color || '#e5e7eb'}; box-shadow: {boxShadow};"
+		'#FFF'}; border-color: {project.border_color || '#e5e7eb'};"
 >
 	<div
 		class="grid h-full min-h-0 w-full min-w-0 gap-2"
