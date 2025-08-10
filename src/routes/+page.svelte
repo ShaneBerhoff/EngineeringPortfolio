@@ -14,7 +14,6 @@
 		<div class="flex max-w-1/2 flex-col space-y-4">
 			<div class="text-5xl">{data.name}</div>
 			<div class="text-lg text-wrap">{data.description}</div>
-			<ModelViewer modelUrl="BoxAnimated.glb" />
 			<div class="flex flex-row flex-wrap gap-2">
 				{#each data.contacts as contact}
 					<Tooltip text={contact.name} position="bottom">

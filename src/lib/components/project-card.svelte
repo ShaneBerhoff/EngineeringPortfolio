@@ -47,9 +47,9 @@
 	>
 		{#each project.grid_item as grid_item}
 			<div
-				class="flex rounded p-4"
+				class="flex rounded"
 				style="grid-column: span {grid_item.cols}; grid-row: span {grid_item.rows}; color: {grid_item.text_color}; background-color: {grid_item.bg_color ||
-					'#6b7280'};"
+					'#e5e7eb'};"
 			>
 				<ProjectCell type={grid_item.type} content={grid_item.content} />
 			</div>

@@ -5,11 +5,11 @@
 </script>
 
 {#if type == 'title'}
-	<div class="flex flex-1 items-center justify-center text-3xl font-bold">{content}</div>
+	<div class="m-4 flex flex-1 items-center justify-center text-3xl font-bold">{content}</div>
 {:else if type == 'text'}
-	<div class="overflow-y-auto">{content}</div>
+	<div class="m-4 overflow-y-auto">{content}</div>
 {:else if type == 'image'}
-	<div class="flex max-h-full justify-center">
+	<div class="m-4 flex max-h-full justify-center">
 		<img src={content} alt={content} class="object-contain" />
 	</div>
 {:else if type == 'model'}
