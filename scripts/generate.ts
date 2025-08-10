@@ -13,9 +13,6 @@ function generateModule() {
 
 		const allIcons = new Set<string>();
 		
-		if (siteData.icon){
-			allIcons.add(siteData.icon)
-		}
 		Object.values(siteData.navigation)
 			.filter((navItem) => navItem.enabled)
 			.forEach((navItem) => {

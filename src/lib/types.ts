@@ -7,9 +7,8 @@ const NavItemSchema = z.object({
 });
 
 export const SiteConfigSchema = z.object({
-	name: z.string(),
-	icon: z.string().optional(),
 	navigation: z.object({
+		profile: NavItemSchema,
 		projects: NavItemSchema,
 		experience: NavItemSchema,
 		skills: NavItemSchema,

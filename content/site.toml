@@ -1,3 +1,5 @@
+[navigation.profile]
+enabled=true
 name="John Doe"
 icon="devicon:bash"
 
