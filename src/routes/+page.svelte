@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { getIcon } from '$lib/generated/icons';
 	import ModelViewer from '$lib/components/model-viewer.svelte';
+	import Tooltip from '$lib/components/tooltip.svelte';
 	import type { HomeConfig } from '$lib/types';
 	let { data }: { data: HomeConfig } = $props();
 </script>
@@ -13,19 +14,20 @@
 		<div class="flex max-w-1/2 flex-col space-y-4">
 			<div class="text-5xl">{data.name}</div>
 			<div class="text-lg text-wrap">{data.description}</div>
-			<ModelViewer modelUrl="BoxAnimated.glb"/>
-			<div class="flex flex-row flex-wrap gap-4">
+			<ModelViewer modelUrl="BoxAnimated.glb" />
+			<div class="flex flex-row flex-wrap gap-2">
 				{#each data.contacts as contact}
-					<a
-						href={contact.link}
-						class="flex aspect-square w-20 flex-col items-center justify-center space-y-2 rounded border border-gray-300 transition-colors hover:bg-gray-200"
-					>
-						{#if contact.icon}
-							{@const IconComponent = getIcon(contact.icon)}
-							<IconComponent color={contact.color} font-size={24} />
-						{/if}
-						<span class="w-full truncate text-center text-xs leading-tight">{contact.name}</span>
-					</a>
+					<Tooltip text={contact.name} position="bottom">
+						<a
+							href={contact.link}
+							class="flex flex-col items-center justify-center rounded border border-gray-300 p-2 transition-colors hover:bg-gray-200"
+						>
+							{#if contact.icon}
+								{@const IconComponent = getIcon(contact.icon)}
+								<IconComponent color={contact.color} font-size={24} />
+							{/if}
+						</a>
+					</Tooltip>
 				{/each}
 			</div>
 		</div>
