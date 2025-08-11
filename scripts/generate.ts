@@ -2,6 +2,8 @@ import { readFileSync } from 'fs';
 import { generateIconsModule } from './generate-icons';
 import { SiteConfigSchema, HomeConfigSchema, SkillsConfigSchema } from '../src/lib/types';
 import TOML from '@iarna/toml';
+import { generateFavicon } from './generate-favicon';
+import { generateTitle } from './generate-title';
 
 function generateModule() {
 	try {
@@ -37,6 +39,12 @@ function generateModule() {
 
 		if (allIcons.size !== 0) {
 			generateIconsModule([...allIcons]);
+		}
+		if (siteData.icon){
+			generateFavicon(siteData.icon)
+		}
+		if (siteData.title){
+			generateTitle(siteData.title)
 		}
 	} catch (error) {
 		console.error('Failed to parse toml files:', error);

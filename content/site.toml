@@ -1,3 +1,6 @@
+title="Website Title" 
+icon="material-symbols:web-sharp"
+
 [navigation.profile]
 enabled=true
 name="John Doe"
