@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { getIcon } from '$lib/generated/icons';
 	import type { SiteConfig } from '$lib/types';
 	let { data }: { data: SiteConfig } = $props();
@@ -13,7 +14,7 @@
 				<div class="flex justify-center">
 					<a
 						class="flex flex-row items-center gap-2 rounded p-2 transition-all hover:bg-gray-200"
-						href={key == 'profile' ? '/' : `/${key}`}
+						href={key == 'profile' ? `${base}/` : `${base}/${key}`}
 					>
 						{#if navItem.icon}
 							{@const IconComponent = getIcon(navItem.icon)}

@@ -9,7 +9,7 @@
 <div class="flex flex-grow items-center justify-center">
 	<div class="flex max-w-5xl flex-row space-x-4 p-4">
 		<div class="max-w-1/2">
-			<img src="/profile.png" alt="Profile" class="rounded-md" />
+			<img src="profile.png" alt="Profile" class="rounded-md" />
 		</div>
 		<div class="flex max-w-1/2 flex-col space-y-4">
 			<div class="text-5xl">{data.name}</div>
