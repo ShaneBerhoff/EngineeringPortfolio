@@ -1,12 +1,14 @@
 # Engineering Portfolio Website Generator
-This is a portfolio website template for engineers that automatically creates a website for you. It assumes a very limited understanding of software development and walks you through the [setup](#setup) process. No coding necessary, just simply [edit the configuration](#how-to-use-the-config-files) files and your website is done.
+This is a portfolio website template for engineers that automatically creates a website for you. It assumes a very limited understanding of software development and walks you through the [setup](#setup) process. No coding necessary, just simply [edit the configuration](#how-make-changes) files and your website is done.
 
 It is highly customizable and even supports your own 3d models!
+
+After viewing the website locally, when you are ready for the website to be live go [here](#how-to-deploy). There is an automatic setup as part of this that will use GitHub pages to host it for free and update when you make changes.
 
 # Setup
 
 ## Install
-You only need to install Node.js to get started.
+You only need to install Node.js to get started. Node.js is a javascript runtime environment and is what allows the code to run outside of a browser so that you can configure the website. You can install it however you like, but here are two different options through terminal commands:
 
 **Option 1: Using Homebrew (if already using it on Mac)**
 ```bash
@@ -195,3 +197,17 @@ Then once you find the icon you want just copy its name. The name will look some
 Everything is handled for you. Just copy and paste the icon names to use any icon. (If you ever have a problem after trying to add an icon you may have accidentally used a name that doesn't exist.)
 
 *Note: if you use an icon that already has a color then setting the color won't do anything.*
+
+# How to Deploy
+The first setup is to turn on the website. Go to settings in the repository in GitHub. Go to the pages section and change the source of "Build and deployment" from `Deploy from a branch` to `GitHub Actions`
+
+Now we just need send the local changes that you have made to GitHub. We will use `git` to do this (the same thing we used to get the code down in the first place). 
+```bash
+git add .
+git commit -m "website updates"
+git push
+```
+Run the three above commands. This uses `git` to save your changes and send them to GitHub. (You can make the commit message anything it doesn't matter.)
+
+
+Any time you want local changes to update on the live website that everyone can see just rerun those commands to send up the new changes. The website will auto deploy.
