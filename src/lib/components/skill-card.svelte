@@ -4,11 +4,12 @@
 	interface Props {
 		color?: string;
 		icon?: string;
+		icon_size?: number;
 		text: string;
 		tilt?: number;
 	}
 
-	const { color = '#6b7280', icon, text, tilt = 5 }: Props = $props();
+	const { color = '#6b7280', icon, icon_size = 64, text, tilt = 5 }: Props = $props();
 
 	let IconComponent = $derived(icon ? getIcon(icon) : null);
 
@@ -81,7 +82,7 @@
 		</h3>
 		{#if IconComponent}
 			<div class="absolute top-1/2 right-0 -translate-y-1/2 opacity-40 z-0">
-				<IconComponent font-size="72" fill={color} {color} />
+				<IconComponent font-size={icon_size} fill={color} {color} />
 			</div>
 		{/if}
 	</div>

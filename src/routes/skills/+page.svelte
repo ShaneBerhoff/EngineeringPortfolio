@@ -15,7 +15,7 @@
 			</div>
 			<div class="flex flex-row flex-wrap gap-4 mb-10">
 				{#each section.skills as skill}
-					<SkillCard color={skill.color} icon={skill.icon} text={skill.name} />
+					<SkillCard color={skill.color} icon={skill.icon} icon_size={skill.icon_size} text={skill.name} />
 				{/each}
 			</div>
 		{/each}

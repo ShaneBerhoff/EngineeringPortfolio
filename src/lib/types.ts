@@ -43,6 +43,7 @@ export type HomeConfig = z.infer<typeof HomeConfigSchema>;
 const SkillSchema = z.object({
 	name: z.string(),
 	icon: z.string().optional(),
+	icon_size: z.number().optional(),
 	color: z
 		.string()
 		.regex(hexColorRegex, hexMessage)
