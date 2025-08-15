@@ -20,7 +20,8 @@ export const SiteConfigSchema = z.object({
 export type SiteConfig = z.infer<typeof SiteConfigSchema>;
 
 // Hex color validation regex
-const hexColorRegex = /^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/;
+const hexColorRegex = /^#([A-Fa-f0-9]{8}|[A-Fa-f0-9]{6}|[A-Fa-f0-9]{4}|[A-Fa-f0-9]{3})$/;
+const hexMessage = "Color must be a valid hex color (e.g., #ff0000) 8, 6, 4, and 3 digit hex are supported."
 
 // Contact schema
 const ContactSchema = z.object({
@@ -29,7 +30,7 @@ const ContactSchema = z.object({
 	icon: z.string().optional(),
 	color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional()
 });
 export const HomeConfigSchema = z.object({
@@ -44,7 +45,7 @@ const SkillSchema = z.object({
 	icon: z.string().optional(),
 	color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional()
 });
 
@@ -67,11 +68,11 @@ const ProjectCellContentSchema = z.object({
 	content: z.string(),
 	text_color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional(),
 	bg_color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional()
 });
 const ProjectSchema = z.object({
@@ -80,15 +81,15 @@ const ProjectSchema = z.object({
 	total_cols: z.number(),
 	bg_color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional(),
 	border_color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional(),
 	shadow_color: z
 		.string()
-		.regex(hexColorRegex, 'Color must be a valid hex color (e.g., #ff0000 or #f00)')
+		.regex(hexColorRegex, hexMessage)
 		.optional(),
 	grid_item: z.array(ProjectCellContentSchema)
 });
