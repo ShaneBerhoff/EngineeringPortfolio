@@ -26,7 +26,7 @@
 					<hr class="w-12 border-gray-300" />
 				</div>
 			</div>
-			{#each experience.projects as project}
+			{#each experience.project as project}
 				{#if project.type == 'large' || project.type == 'small'}
 					<ProjectCard {project} />
 				{:else}

@@ -23,14 +23,14 @@ function generateModule() {
 				}
 			});
 
-		homeData.contacts.forEach((contact) => {
+		homeData.contact.forEach((contact) => {
 			if (contact.icon) {
 				allIcons.add(contact.icon);
 			}
 		});
 
-		skillData.sections.forEach((section) => {
-			section.skills.forEach((skill) => {
+		skillData.section.forEach((section) => {
+			section.skill.forEach((skill) => {
 				if (skill.icon) {
 					allIcons.add(skill.icon);
 				}

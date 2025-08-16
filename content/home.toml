@@ -1,24 +1,24 @@
 name="John Doe"
 description="This is my portfolio. Here is a little bit about me. Take a look at the other pages for more info."
 
-[[contacts]]
+[[contact]]
 name = "GitHub"
 link = "https://github.com/"
 icon = "devicon:github"
 # color = "#000000"
 
-[[contacts]]
+[[contact]]
 name = "LinkedIn"
 link = "https://linkedin.com/"
 icon = "devicon:linkedin"
 
-[[contacts]]
+[[contact]]
 name = "Twitter"
 link = "https://twitter.com/"
 icon = "devicon:twitter"
 # color = "#1da1f2"
 
-[[contacts]]
+[[contact]]
 name = "Email"
 link = "mailto:example@example.com"
 icon = "material-symbols:alternate-email"

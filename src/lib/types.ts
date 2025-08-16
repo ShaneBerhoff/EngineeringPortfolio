@@ -36,7 +36,7 @@ const ContactSchema = z.object({
 export const HomeConfigSchema = z.object({
 	name: z.string(),
 	description: z.string(),
-	contacts: z.array(ContactSchema)
+	contact: z.array(ContactSchema)
 });
 export type HomeConfig = z.infer<typeof HomeConfigSchema>;
 
@@ -52,11 +52,11 @@ const SkillSchema = z.object({
 
 const SkillSectionSchema = z.object({
 	name: z.string(),
-	skills: z.array(SkillSchema)
+	skill: z.array(SkillSchema)
 });
 
 export const SkillsConfigSchema = z.object({
-	sections: z.array(SkillSectionSchema)
+	section: z.array(SkillSectionSchema)
 });
 export type SkillsConfig = z.infer<typeof SkillsConfigSchema>;
 
@@ -95,7 +95,7 @@ const ProjectSchema = z.object({
 	grid_item: z.array(ProjectCellContentSchema)
 });
 export const ProjectsConfigSchema = z.object({
-	projects: z.array(ProjectSchema)
+	project: z.array(ProjectSchema)
 });
 export type ContentType = z.infer<typeof ContentTypeSchema>;
 export type ProjectConfig = z.infer<typeof ProjectSchema>;
@@ -111,7 +111,7 @@ const ExperienceSectionSchema = z.object({
 	company: z.string(),
 	position: z.string(),
 	timeline: z.string(),
-	projects: z.array(ProjectSchema)
+	project: z.array(ProjectSchema)
 });
 export const ExperienceConfigSchema = z.object({
 	experience: z.array(ExperienceSectionSchema)

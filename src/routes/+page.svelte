@@ -15,7 +15,7 @@
 			<div class="text-5xl">{data.name}</div>
 			<div class="text-lg text-wrap">{data.description}</div>
 			<div class="flex flex-row flex-wrap gap-2">
-				{#each data.contacts as contact}
+				{#each data.contact as contact}
 					<Tooltip text={contact.name} position="bottom">
 						<a
 							href={contact.link}
