@@ -72,12 +72,12 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
 	bind:this={el}
-	class="fancy-card relative w-61 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm
+	class="fancy-card w-full relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm
 		transition-all duration-200"
 	onmousemove={onHover}
 >
 	<div class="card-inner flex flex-col p-6">
-		<h3 class="text-lg leading-none font-semibold tracking-tight text-gray-900 relative z-10">
+		<h3 class="text-lg leading-none font-semibold tracking-tight text-gray-900 relative z-5">
 			{text}
 		</h3>
 		{#if IconComponent}

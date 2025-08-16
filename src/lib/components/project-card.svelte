@@ -35,14 +35,14 @@
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <div
-	class="m-4 flex h-[{card_height}rem] w-full max-w-7xl flex-row justify-center space-x-2 overflow-hidden rounded-2xl border-2 p-4 transition-all"
+	class="m-4 flex h-auto md:h-[{card_height}rem] w-full md:max-w-7xl flex-row justify-center overflow-hidden rounded-2xl border-2 p-4 transition-all"
 	onmouseenter={(e) => (e.currentTarget.style.boxShadow = hoverShadow)}
 	onmouseleave={(e) => (e.currentTarget.style.boxShadow = 'none')}
-	style="height: {card_height}rem; background-color: {project.bg_color ||
-		'#FFF'}; border-color: {project.border_color || '#e5e7eb'};"
+	style="background-color: {project.bg_color || '#FFF'}; border-color: {project.border_color || '#e5e7eb'};"
 >
+	<!-- On big screens -->
 	<div
-		class="grid h-full min-h-0 w-full min-w-0 gap-2"
+		class="hidden md:grid h-full min-h-0 w-full min-w-0 gap-2"
 		style="grid-template-rows: repeat({project.total_rows}, minmax(0, 1fr)); grid-template-columns: repeat({project.total_cols}, minmax(0, 1fr));"
 	>
 		{#each project.grid_item as grid_item}
@@ -51,6 +51,14 @@
 				style="grid-column: span {grid_item.cols}; grid-row: span {grid_item.rows}; color: {grid_item.text_color}; background-color: {grid_item.bg_color ||
 					'#e5e7eb'};"
 			>
+				<ProjectCell type={grid_item.type} content={grid_item.content} />
+			</div>
+		{/each}
+	</div>
+	<!-- On small screens -->
+	<div class="flex flex-col gap-2 md:hidden w-full">
+		{#each project.grid_item as grid_item}
+			<div class="rounded" style="color: {grid_item.text_color}; background-color: {grid_item.bg_color || '#e5e7eb'};">
 				<ProjectCell type={grid_item.type} content={grid_item.content} />
 			</div>
 		{/each}

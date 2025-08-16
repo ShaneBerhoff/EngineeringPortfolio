@@ -336,7 +336,7 @@
 	}
 </script>
 
-<div bind:this={containerRef} style="position: relative; width: 100%; height: 100%;">
+<div bind:this={containerRef} class="relative w-full h-full">
 	<Canvas renderMode="always">
 		<!-- Camera with mouse controls -->
 		<T.PerspectiveCamera makeDefault position={cameraPosition} fov={25}>

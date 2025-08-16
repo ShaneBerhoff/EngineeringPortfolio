@@ -5,25 +5,36 @@
 	let { data }: { data: ExperienceConfig } = $props();
 </script>
 
-<div class="flex flex-grow flex-col items-center px-4 pb-4">
-	<div class="p-4 text-6xl font-bold mb-2">Experience</div>
+<div class="flex w-full flex-grow flex-col items-center px-4 pb-4">
+	<div class="mb-2 p-4 text-4xl font-bold sm:text-6xl">Experience</div>
 	{#each data.experience as experience}
-		<div class="w-full h-full items-center flex flex-col mb-10">
-			<div class="text-lg grid w-full max-w-7xl grid-cols-3 items-center text-gray-500">
-				<div class="flex items-center gap-4">
-					<hr class="w-12 border-gray-300" />
+		<div class="mb-10 flex h-full w-full flex-col items-center">
+			<!-- sm screen -->
+			<div class="flex w-full flex-col items-center text-gray-500 sm:hidden">
+				<div class="flex w-full flex-row justify-between items-center gap-4">
+					<div class="flex-shrink-0">{experience.company}</div>
+					<hr class="flex-1 border-gray-300" />
+					<div class="flex-shrink-0">{experience.position}</div>
+				</div>
+			</div>
+			<!-- md/lg screen -->
+			<div
+				class="hidden w-full max-w-7xl grid-cols-3 items-center text-gray-500 sm:grid md:text-lg"
+			>
+				<div class="flex items-center justify-start gap-4">
+					<hr class="border-gray-300 md:w-12" />
 					<div class="flex-shrink-0">{experience.company}</div>
 					<hr class="flex-1 border-gray-300" />
 				</div>
-				<div class="flex items-center gap-4">
+				<div class="flex items-center justify-center gap-4">
 					<hr class="flex-1 border-gray-300" />
 					<div class="flex-shrink-0">{experience.position}</div>
 					<hr class="flex-1 border-gray-300" />
 				</div>
-				<div class="flex items-center gap-4">
+				<div class="flex items-center justify-end gap-4">
 					<hr class="flex-1 border-gray-300" />
 					<div class="flex-shrink-0">{experience.timeline}</div>
-					<hr class="w-12 border-gray-300" />
+					<hr class="border-gray-300 md:w-12" />
 				</div>
 			</div>
 			{#each experience.project as project}

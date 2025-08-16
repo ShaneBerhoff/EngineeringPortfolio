@@ -22,7 +22,7 @@
 								<IconComponent />
 							</div>
 						{/if}
-						<p class="hidden sm:flex">{navItem.name}</p>
+						<p class="hidden sm:flex text-sm md:text-base">{navItem.name}</p>
 					</a>
 				</div>
 			{/if}

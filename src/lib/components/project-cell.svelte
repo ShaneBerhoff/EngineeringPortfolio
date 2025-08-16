@@ -13,7 +13,9 @@
 		<img src={content} alt={content} class="object-contain" />
 	</div>
 {:else if type == 'model'}
-	<ModelViewer modelUrl={content} />
+	<div class="flex w-full aspect-square md:aspect-auto">
+		<ModelViewer modelUrl={content} />
+	</div>
 {:else}
 	<div>Invalid Content Type</div>
 {/if}
