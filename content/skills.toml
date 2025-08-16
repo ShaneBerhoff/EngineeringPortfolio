@@ -4,6 +4,7 @@ name = "Programming Languages"
 [[section.skill]]
 name = "Python"
 icon = "devicon:python"
+icon_size = 72
 color = "#0000FF"
 
 [[section.skill]]
@@ -20,6 +21,16 @@ name = "C++"
 icon = "devicon:cplusplus"
 color = "#0000FF"
 
+[[section.skill]]
+name = "Elixir"
+icon = "devicon:elixir"
+color = "#B43BFF"
+
+[[section.skill]]
+name = "Gleam"
+icon = "devicon:gleam"
+color = "#FFAFF3"
+
 
 [[section]]
 name = "Frameworks"
@@ -27,10 +38,12 @@ name = "Frameworks"
 [[section.skill]]
 name = "Svelte"
 icon = "devicon:svelte"
+color = "#FF7330"
 
 [[section.skill]]
 name = "React"
 icon = "devicon:react"
+color = "#5CDDFF"
 
 
 [[section]]
@@ -39,3 +52,11 @@ name = "Tools"
 [[section.skill]]
 name = "Fusion"
 icon = "devicon:fusion"
+
+[[section.skill]]
+name = "Blender"
+icon = "devicon:blender"
+
+[[section.skill]]
+name = "Git"
+icon = "devicon:git"
