@@ -9,7 +9,7 @@
 {:else if type == 'text'}
 	<div class="m-4 overflow-y-auto">{content}</div>
 {:else if type == 'image'}
-	<div class="m-4 flex max-h-full justify-center">
+	<div class="p-4 mx-auto flex max-h-full justify-center">
 		<img src={content} alt={content} class="object-contain" />
 	</div>
 {:else if type == 'model'}
