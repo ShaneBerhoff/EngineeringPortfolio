@@ -36,6 +36,10 @@
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 		allowfullscreen
 	></iframe>
+{:else if type == 'pdf'}
+	<div class="flex h-full w-full flex-col justify-center items-center">
+		<iframe src={content} class="h-full w-full" title={content.toString()}></iframe>
+	</div>
 {:else}
 	<div>Invalid Content Type</div>
 {/if}
